@@ -19,7 +19,9 @@ public class Basic {
         Node e = new Node(8);
         d.next = e;
 //        System.out.println(e.next);
-        DisplayLL(d);
+        DisplayLLRec(a);
+//        System.out.println();
+
     }
     public static void DisplayLL(Node head){
         while (head != null){
@@ -28,5 +30,13 @@ public class Basic {
             head = temp.next;
         }
         System.out.println();
+    }
+    public static void DisplayLLRec(Node head){
+        if(head == null){
+            return;
+        }
+        System.out.println(head.data);
+        DisplayLLRec(head.next);
+
     }
 }
