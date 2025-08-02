@@ -9,5 +9,6 @@ public class ReverseTheNumber {
             n = n/10;
         }
         System.out.println("The Reverse Of The Number is: "+num);
+        System.out.println();
     }
 }
