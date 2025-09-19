@@ -5,11 +5,12 @@ public class LargestAndSmallestElement {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int [] arr = FindingIndex.inputArray(size);
-        LargestAndSmallestElement(arr);
+        int [] ans = LargestAndSmallestElement(arr);
         FindingIndex.displayArray(arr);
+        FindingIndex.displayArray(ans);
 
     }
-    public static void LargestAndSmallestElement(int [] arr){
+    public static int [] LargestAndSmallestElement(int [] arr){
         for(int i=0; i<arr.length-1; i++){
             for(int j=i+1; j<arr.length; j++){
                 if(arr[i]>arr[j]){
@@ -19,5 +20,9 @@ public class LargestAndSmallestElement {
                 }
             }
         }
+        int [] a = new int [2];
+        a[0] = arr[0];
+        a[1] = arr[arr.length-1];
+        return a;
     }
 }
