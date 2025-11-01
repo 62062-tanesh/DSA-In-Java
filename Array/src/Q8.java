@@ -1,6 +1,6 @@
 public class Q8 {
     public static void main(String[] args) {
-        int [] arr = {25,16,38,10,35,20,50};
+        int [] arr = {25,16,10,35,10,20,50};
         System.out.println(secondMaxElement(arr));
     }
     public static int secondMaxElement(int [] a){
@@ -16,7 +16,7 @@ public class Q8 {
                 max1 = a[i];
             }
             else{
-                if(max2>a[i]){
+                if(max2<a[i]){
                     max2 = a[i];
                 }
             }
